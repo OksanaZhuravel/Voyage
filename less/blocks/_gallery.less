@@ -1,0 +1,19 @@
+.gallery {
+  max-width: 1377px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
+  justify-items: center;
+  align-items: center;
+  justify-content: center;
+
+  &__foto {
+    display: block;
+    width: 437px;
+    height: 294px;
+
+    &:hover {
+      transform: scale(1.2) rotate(5deg);
+    }
+  }
+}
