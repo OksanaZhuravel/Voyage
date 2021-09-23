@@ -106,9 +106,9 @@ function buildcopy() {
     .pipe(dest('dest')); // Выгружаем в папку с финальной сборкой
 }
 
-function cleandist() {
-  return del('dest/**/*', { force: true }); // Удаляем все содержимое папки "dist/"
-}
+// function cleandist() {
+//   return del('dest/**/*', { force: true }); // Удаляем все содержимое папки "dist/"
+// }
 
 function startwatch() {
   // Выбираем все файлы JS в проекте, а затем исключим с суффиксом .min.js
@@ -141,7 +141,7 @@ exports.styles = styles;
 
 // Создаем новый таск "build", который последовательно выполняет нужные операции
 // exports.build = series(cleandist, styles, scripts, images, buildcopy);
-exports.build = series(cleandist, styles, scripts, buildcopy);
+exports.build = series(styles, scripts, buildcopy);
 
 // Экспортируем дефолтный таск с нужным набором функций
 exports.default = parallel(styles, scripts, browsersync, startwatch);
