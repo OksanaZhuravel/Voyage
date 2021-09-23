@@ -21,4 +21,4 @@ Thumbs.db
 /dest/*
 !/dest/css
 !/dest/img
-!dest/**/*.html
+!dest/index.html
