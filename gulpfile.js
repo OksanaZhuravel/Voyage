@@ -52,9 +52,9 @@ function scripts() {
 }
 
 function styles() {
-  return src('app/' + preprocessor + '/style.' + preprocessor + '') // Выбираем источник: "app/sass/main.sass" или "app/less/main.less"
+  return src('app/' + preprocessor + '/style.' + preprocessor + '') // Выбираем источник: "app/sass/style.sass" или "app/less/style.less"
     .pipe(eval(preprocessor)()) // Преобразуем значение переменной "preprocessor" в функцию
-    .pipe(concat('app.min.css')) // Конкатенируем в файл app.min.js
+    .pipe(concat('style.min.css')) // Конкатенируем в файл style.min.js
     .pipe(
       autoprefixer({ overrideBrowserslist: ['last 10 versions'], grid: true })
     ) // Создадим префиксы с помощью Autoprefixer
