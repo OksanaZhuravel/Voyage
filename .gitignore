@@ -18,3 +18,7 @@ Thumbs.db
 .app
 .app/
 /app/
+/dest/*
+!/dest/css
+!/dest/img
+!/dest/*.html
